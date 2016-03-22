@@ -1,0 +1,1 @@
+`import_feed --file-xml /tmp/test.xml`

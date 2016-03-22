@@ -49,6 +49,7 @@ class WorkTime(models.Model):
 
 
 class Event(models.Model):
+    event_id = models.IntegerField(default=0)
     title = models.CharField(verbose_name='Название', max_length=255)
     type = models.CharField(max_length=255)
     runtime = models.IntegerField(null=True, blank=True)
@@ -61,6 +62,7 @@ class Event(models.Model):
 
 
 class Place(models.Model):
+    place_id = models.IntegerField(default=0)
     title = models.CharField(verbose_name='Название', max_length=255)
     type = models.CharField(max_length=255)
     address = models.CharField(null=True, blank=True, max_length=255)
@@ -79,6 +81,6 @@ class Place(models.Model):
 class Schedule(models.Model):
     date = models.DateField()
     time = models.DateTimeField()
-    event = models.ForeignKey(Event)
-    place = models.ForeignKey(Place)
+    event = models.ManyToManyField(Event, blank=True)
+    place = models.ManyToManyField(Place, blank=True)
     time_till = models.DateTimeField(null=True, blank=True)
