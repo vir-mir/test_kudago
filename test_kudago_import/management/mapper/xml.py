@@ -56,7 +56,6 @@ class MapperXml(Mapper):
         if any(event.get_elements('tags')):
             kwargs['tags'] = list(map(self.add_tags, event.tags.children))
 
-        print(event.get_elements('gallery'))
         if any(event.get_elements('gallery')):
             kwargs['gallery'] = list(map(self.add_gallery, event.gallery.children))
 
