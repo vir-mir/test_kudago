@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vir-mir/test_kudago.svg)](https://travis-ci.org/vir-mir/test_kudago)
+
 ## import
 `python manage.py --file-xml /tmp/test.xml`
 
