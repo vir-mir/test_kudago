@@ -3,12 +3,13 @@
 
 ## DEV
 ```bash
-pep8 --max-line-length=120 --exclude=migrations .
+$ pep8 --max-line-length=120 --exclude=migrations .
+$ nosetests -v
 ```
 
 ## install
 ```bash
-pip install git+https://github.com/vir-mir/test_kudago
+$ pip install git+https://github.com/vir-mir/test_kudago
 ```
 
 add `settings.py`
@@ -20,5 +21,5 @@ INSTALLED_APPS = [
 ```
 
 ```bash
-python manage.py migrate
+$ python manage.py migrate
 ```
