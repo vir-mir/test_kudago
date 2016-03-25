@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.core.management.base import BaseCommand
-from feed.management.utils import xml
+from test_kudago_import.management.mapper import xml
 
 
 class Command(BaseCommand):
@@ -13,7 +13,7 @@ class Command(BaseCommand):
             self.stderr.write('Неуказан файл для импорта')
 
     def set_xml(self, path):
-        data = xml.DataXml()
+        data = xml.MapperXml()
         data.open_xml_file(path)
         data.set_events()
         data.set_places()

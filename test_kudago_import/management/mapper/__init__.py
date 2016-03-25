@@ -3,6 +3,12 @@
 
 class Mapper(object):
 
+    def __init__(self):
+        self.data = None
+        self.events = []
+        self.places = []
+        self.schedules = []
+
     def add_models(self, data, Model):
         item, created = Model.objects.get_or_create(**data)
         return item

@@ -1,18 +1,11 @@
 # -*- coding: utf-8 -*-
 import datetime
-
-from feed.models import Tag, Gallery, Person, City, Metro, WorkTime, Phone, Place, Event, Schedule
+from test_kudago_import.models import Tag, Gallery, Person, City, Metro, WorkTime, Phone, Place, Event, Schedule
 import untangle
-from feed.management.utils import Mapper
+from test_kudago_import.management.mapper import Mapper
 
 
-class DataXml(Mapper):
-
-    def __init__(self):
-        self.data = None
-        self.events = []
-        self.places = []
-        self.schedules = []
+class MapperXml(Mapper):
 
     def open_xml_file(self, path):
         self.data = untangle.parse(path)
@@ -63,6 +56,7 @@ class DataXml(Mapper):
         if any(event.get_elements('tags')):
             kwargs['tags'] = list(map(self.add_tags, event.tags.children))
 
+        print(event.get_elements('gallery'))
         if any(event.get_elements('gallery')):
             kwargs['gallery'] = list(map(self.add_gallery, event.gallery.children))
 

@@ -3,5 +3,5 @@ from django.apps import AppConfig
 
 
 class FeedConfig(AppConfig):
-    name = 'feed'
+    name = 'test_kudago_import'
     verbose_name = 'Тестовая молель'

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from feed import models
+from test_kudago_import import models
 
 admin.site.register(models.City)
 admin.site.register(models.Event)

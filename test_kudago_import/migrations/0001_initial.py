@@ -74,10 +74,10 @@ class Migration(migrations.Migration):
                 ('coordinates_lg', models.FloatField(blank=True, null=True)),
                 ('url', models.URLField(blank=True, max_length=255, null=True)),
                 ('text', models.TextField(blank=True, null=True)),
-                ('city', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='places', to='feed.City')),
-                ('gallery', models.ManyToManyField(blank=True, related_name='places', to='feed.Gallery')),
-                ('metros', models.ManyToManyField(blank=True, related_name='places', to='feed.Metro')),
-                ('phones', models.ManyToManyField(blank=True, related_name='places', to='feed.Phone')),
+                ('city', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='places', to='test_kudago_import.City')),
+                ('gallery', models.ManyToManyField(blank=True, related_name='places', to='test_kudago_import.Gallery')),
+                ('metros', models.ManyToManyField(blank=True, related_name='places', to='test_kudago_import.Metro')),
+                ('phones', models.ManyToManyField(blank=True, related_name='places', to='test_kudago_import.Phone')),
             ],
         ),
         migrations.CreateModel(
@@ -87,8 +87,8 @@ class Migration(migrations.Migration):
                 ('date', models.DateField()),
                 ('time', models.DateTimeField()),
                 ('time_till', models.DateTimeField(blank=True, null=True)),
-                ('event', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='feed.Event')),
-                ('place', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='feed.Place')),
+                ('event', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='test_kudago_import.Event')),
+                ('place', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='test_kudago_import.Place')),
             ],
         ),
         migrations.CreateModel(
@@ -113,12 +113,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='place',
             name='tags',
-            field=models.ManyToManyField(blank=True, related_name='places', to='feed.Tag'),
+            field=models.ManyToManyField(blank=True, related_name='places', to='test_kudago_import.Tag'),
         ),
         migrations.AddField(
             model_name='place',
             name='work_times',
-            field=models.ManyToManyField(blank=True, related_name='places', to='feed.WorkTime'),
+            field=models.ManyToManyField(blank=True, related_name='places', to='test_kudago_import.WorkTime'),
         ),
         migrations.AlterUniqueTogether(
             name='phone',
@@ -131,16 +131,16 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='event',
             name='gallery',
-            field=models.ManyToManyField(blank=True, related_name='events', to='feed.Gallery'),
+            field=models.ManyToManyField(blank=True, related_name='events', to='test_kudago_import.Gallery'),
         ),
         migrations.AddField(
             model_name='event',
             name='persons',
-            field=models.ManyToManyField(blank=True, related_name='events', to='feed.Person'),
+            field=models.ManyToManyField(blank=True, related_name='events', to='test_kudago_import.Person'),
         ),
         migrations.AddField(
             model_name='event',
             name='tags',
-            field=models.ManyToManyField(blank=True, related_name='events', to='feed.Tag'),
+            field=models.ManyToManyField(blank=True, related_name='events', to='test_kudago_import.Tag'),
         ),
     ]
