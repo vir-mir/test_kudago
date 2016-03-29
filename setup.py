@@ -9,11 +9,6 @@ def read(fname):
     return codecs.open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
-def read_requirements():
-    requirements = codecs.open(os.path.join(os.path.dirname(__file__), 'requirements.txt')).readlines()
-    return list(map(lambda x: x.strip(), requirements))
-
-
 def get_packages(package):
     return [dirpath
             for dirpath, dirnames, filenames in os.walk(package)
@@ -30,7 +25,9 @@ setup(
     packages=get_packages('test_kudago_import'),
     package_data=get_package_data('test_kudago_import'),
     long_description=read("README.md"),
-    install_requires=read_requirements(),
+    install_requires=[
+        'untangle==1.1.0',
+    ],
     url='https://github.com/vir-mir/test_kudago',
     license='MIT',
     author='vir-mir',
