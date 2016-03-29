@@ -22,36 +22,37 @@ class MapperXmlTest(xml.MapperXml):
 class TestMapperXml(unittest.TestCase):
 
     EVENT = {
-        'age_restricted': 18,
-        'event_id': 93962,
-        'tags':
+        u'age_restricted': 18,
+        u'event_id': 93962,
+        u'tags':
             [
-                {'name': '18+'},
-                {'name': 'тяжелый рок'},
-                {'name': 'рок и рок-н-ролл'},
-                {'name': 'концерт'}, {'name': 'метал'}
+                {'name': u'18+'},
+                {'name': u'тяжелый рок'},
+                {'name': u'рок и рок-н-ролл'},
+                {'name': u'концерт'},
+                {'name': u'метал'}
             ],
-        'text': '',
-        'type': 'concert',
-        'title': 'Grond, Terror striker, Chaosbringer, Hekata',
-        'gallery': [
-            {'image_url': 'http://test.kudago.com/media/images/event/ec/5d/ec5d2c707c1594a9307d259b209c0894.jpg'}, ],
+        u'text': u'',
+        u'type': u'concert',
+        u'title': u'Grond, Terror striker, Chaosbringer, Hekata',
+        u'gallery': [
+            {u'image_url': u'http://test.kudago.com/media/images/event/ec/5d/ec5d2c707c1594a9307d259b209c0894.jpg'}, ],
     }
 
     PLACE = {
-        'place_id': 106,
-        'coordinates_lt': 59.906923,
-        'url': 'http://www.clubzal.com/',
-        'coordinates_lg': 30.307352,
-        'title': 'Clubzal («Зал Ожидания»)',
-        'address': 'Наб. Обводного канала 118',
-        'type': 'other',
-        'phones': [
-            {'number': '78123331068', 'type': 'other'},
-            {'number': '78123331069', 'type': 'other'}
+        u'place_id': 106,
+        u'coordinates_lt': 59.906923,
+        u'url': 'http://www.clubzal.com/',
+        u'coordinates_lg': 30.307352,
+        u'title': u'Clubzal («Зал Ожидания»)',
+        u'address': u'Наб. Обводного канала 118',
+        u'type': u'other',
+        u'phones': [
+            {u'number': u'78123331068', u'type': 'other'},
+            {u'number': u'78123331069', 'type': 'other'}
         ],
         'metros': [
-            {'name': 'Балтийская'}
+            {'name': u'Балтийская'}
         ],
         'gallery': [
             {'image_url': 'http://test.kudago.com/media/images/place/0a/31/0a319b1a3d2234cfc5a4d92954eb8e16.jpg'},
@@ -59,13 +60,13 @@ class TestMapperXml(unittest.TestCase):
             {'image_url': 'http://test.kudago.com/media/images/place/e7/5e/e75e2a00d7b4aeb02627472c8ae5d4a5.jpg'}
         ],
 
-        'text': '<p>«Зал Ожидания» концертных площадках, которые рассчитанных на </p>\n',
-        'city': {'name': 'Санкт-Петербург'},
+        'text': u'<p>«Зал Ожидания» концертных площадках, которые рассчитанных на </p>\n',
+        'city': {'name': u'Санкт-Петербург'},
         'tags': [
-            {'name': 'клубы'}
+            {'name': u'клубы'}
         ],
         'work_times': [
-            {'time': 'ежедневно 20:00–6:00', 'type': 'openhours'}
+            {'time': u'ежедневно 20:00–6:00', 'type': 'openhours'}
         ],
     }
 
