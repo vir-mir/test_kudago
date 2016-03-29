@@ -47,5 +47,13 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Topic :: Software Development :: Libraries :: Python Modules',
-    ]
+    ],
+
+    # Enable django-setuptest
+    test_suite='setuptest.setuptest.SetupTestSuite',
+    tests_require=(
+        'django-setuptest',
+        # Required by django-setuptools on Python 2.6
+        'argparse'
+    ),
 )
