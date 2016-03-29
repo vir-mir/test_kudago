@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 import os
-from functools import namedtuple
-
+from collections import namedtuple
 import datetime
 from test_kudago_import.management.mapper import xml
 

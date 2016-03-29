@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 import codecs
 import os
-from distutils.core import setup
-from setuptest import test
+from setuptools import setup
 
 
 def read(fname):
@@ -27,7 +26,7 @@ def get_package_data(package):
 
 setup(
     name='test_kudago_import',
-    version='1.0.1',
+    version='1.0.2',
     packages=get_packages('test_kudago_import'),
     package_data=get_package_data('test_kudago_import'),
     long_description=read("README.md"),

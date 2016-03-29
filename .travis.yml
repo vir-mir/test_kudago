@@ -11,8 +11,8 @@ env:
 # command to install dependencies
 install:
   - pip install $DJANGO
+  - pip install django-setuptest==0.2.1
   - pip install -r requirements.txt
-  - pip install -r requirements-dev.txt
 
 # command to run tests
 script:
