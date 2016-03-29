@@ -1,1 +1,2 @@
 untangle==1.1.0
+django-setuptest==0.2.1

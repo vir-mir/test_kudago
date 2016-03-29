@@ -3,6 +3,7 @@
 import codecs
 import os
 from distutils.core import setup
+from setuptest import test
 
 
 def read(fname):
