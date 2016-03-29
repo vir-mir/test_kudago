@@ -10,10 +10,10 @@ env:
 
 # command to install dependencies
 install:
-  - pip install -q $DJANGO --use-mirrors
+  - pip install -q $DJANGO
   - pip install -r requirements.txt
   - pip install -r requirements-dev.txt
-  - pip install -q https://github.com/praekelt/django-setuptest/archive/f4eacb4a929cdcc853a5c053c282dada5bdedc99.tar.gz --use-mirrors
+  - pip install -q https://github.com/praekelt/django-setuptest/archive/f4eacb4a929cdcc853a5c053c282dada5bdedc99.tar.gz
 
 # command to run tests
 script:
