@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed version="1.1">
+  <events>
+    <event id="93962" price="true" type="concert">
+      <title><![CDATA[Grond, Terror striker, Chaosbringer, Hekata]]></title>
+      <age_restricted>18+</age_restricted>
+      <tags>
+        <tag>18+</tag>
+        <tag>тяжелый рок</tag>
+        <tag>рок и рок-н-ролл</tag>
+        <tag>концерт</tag>
+        <tag>метал</tag>
+      </tags>
+      <gallery>
+        <image href="http://test.kudago.com/media/images/event/ec/5d/ec5d2c707c1594a9307d259b209c0894.jpg"/>
+      </gallery>
+      <text></text>
+    </event>
+  </events>
+  <places>
+    <place id="106" type="other">
+      <city>Санкт-Петербург</city>
+      <title>Clubzal («Зал Ожидания»)</title>
+      <address>Наб. Обводного канала 118</address>
+      <coordinates latitude="59.906923" longitude="30.307352"/>
+      <phones>
+        <phone type="other">+7 812 333-10-68</phone>
+        <phone type="other">+7 812 333-10-69</phone>
+      </phones>
+      <work_times>
+        <work_time type="openhours">ежедневно 20:00–6:00</work_time>
+      </work_times>
+      <tags>
+        <tag>клубы</tag>
+      </tags>
+      <metros>
+        <metro>Балтийская</metro>
+      </metros>
+      <gallery>
+        <image href="http://test.kudago.com/media/images/place/0a/31/0a319b1a3d2234cfc5a4d92954eb8e16.jpg"/>
+        <image href="http://test.kudago.com/media/images/place/87/18/871825aca3822ce114dca5e820ed40a6.jpg"/>
+        <image href="http://test.kudago.com/media/images/place/e7/5e/e75e2a00d7b4aeb02627472c8ae5d4a5.jpg"/>
+      </gallery>
+      <text><![CDATA[<p>«Зал Ожидания» концертных площадках, которые рассчитанных на </p>
+]]></text>
+      <url>http://www.clubzal.com/</url>
+    </place>
+  </places>
+  <schedule>
+    <session date="2015-10-01" event="93962" place="106" time="13:00" timetill="21:00"/>
+  </schedule>
+</feed>

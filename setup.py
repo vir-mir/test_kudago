@@ -2,16 +2,11 @@
 # -*- coding: utf-8 -*-
 import codecs
 import os
-from distutils.core import setup
+from setuptools import setup
 
 
 def read(fname):
     return codecs.open(os.path.join(os.path.dirname(__file__), fname)).read()
-
-
-def read_requirements():
-    requirements = codecs.open(os.path.join(os.path.dirname(__file__), 'requirements.txt')).readlines()
-    return list(map(lambda x: x.strip(), requirements))
 
 
 def get_packages(package):
@@ -26,11 +21,13 @@ def get_package_data(package):
 
 setup(
     name='test_kudago_import',
-    version='1.0.1',
+    version='1.0.2',
     packages=get_packages('test_kudago_import'),
     package_data=get_package_data('test_kudago_import'),
     long_description=read("README.md"),
-    install_requires=read_requirements(),
+    install_requires=[
+        'untangle==1.1.0',
+    ],
     url='https://github.com/vir-mir/test_kudago',
     license='MIT',
     author='vir-mir',
@@ -43,9 +40,16 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.4.3',
         'Programming Language :: Python :: 3.5',
         'Topic :: Software Development :: Libraries :: Python Modules',
-    ]
+    ],
+
+    # Enable django-setuptest
+    test_suite='setuptest.setuptest.SetupTestSuite',
+    tests_require=(
+        'django-setuptest',
+        # Required by django-setuptools on Python 2.6
+        'argparse'
+    ),
 )

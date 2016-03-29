@@ -7,7 +7,8 @@ from test_kudago_import.management.mapper import Mapper
 
 class MapperXml(Mapper):
 
-    def open_xml_file(self, path):
+    def __init__(self, path, *args, **kwargs):
+        super(MapperXml, self).__init__(*args, **kwargs)
         self.data = untangle.parse(path)
 
     def add_tags(self, tag):
@@ -129,3 +130,8 @@ class MapperXml(Mapper):
 
     def set_schedules(self):
         self.schedules = list(map(self.add_schedule, self.data.feed.schedule.children))
+
+    def load(self):
+        self.set_events()
+        self.set_places()
+        self.set_schedules()
