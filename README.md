@@ -3,12 +3,6 @@
 ## import
 `python manage.py --file-xml /tmp/test.xml`
 
-## DEV
-```bash
-$ pep8 --max-line-length=120 --exclude=migrations .
-$ nosetests -v
-```
-
 ## install
 ```bash
 $ pip install git+https://github.com/vir-mir/test_kudago
